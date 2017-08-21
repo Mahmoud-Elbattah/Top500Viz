@@ -132,7 +132,7 @@
                 document.getElementById('spanRpeak').innerHTML = rPeak;
                 document.getElementById('spanPower').innerHTML = power;
                 //Showing infoBox
-                $("#infoBox").fadeTo("medium", 0.8);
+                $("#infoBox").fadeTo("medium", 0.85);
             });
                //Setting original fill color on 'mouse-out' event
                 map.data.addListener('mouseout', function (event) {
@@ -184,13 +184,13 @@
                                 <td>Cores:</td><td><span id="spanCores"></span></td>
                             </tr>
                             <tr>
-                                <td>Rmax:</td><td><span id="spanRmax"></span></td>
+                                <td>Rmax (TFlop/s):</td><td><span id="spanRmax"></span></td>
                             </tr>
                             <tr>
-                                <td>Rpeak:</td><td><span id="spanRpeak"></span></td>
+                                <td>Rpeak (TFlop/s):</td><td><span id="spanRpeak"></span></td>
                             </tr>
                              <tr>
-                                <td>Power:</td><td><span id="spanPower"></span></td>
+                                <td>Power (kW):</td><td><span id="spanPower"></span></td>
                             </tr>
                         </table>
                     </div>
