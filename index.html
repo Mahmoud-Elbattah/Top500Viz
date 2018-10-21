@@ -50,6 +50,7 @@
          margin-left:2px;
       }
                </style>
+               <link rel="stylesheet" href="css/modal.css">
 <script type="text/javascript">
         var map;
         var infoBoxVisible=false;
@@ -147,35 +148,51 @@
  
     }
     </script>
-    </head>
+<!--Script for the about modal box -->
+<script type="text/javascript">
+       $(window).load(function () {
+           $(".trigger_popup_fricc").click(function () {
+               $('.hover_bkgr_fricc').show();
+           });
+           $('.hover_bkgr_fricc').click(function () {
+               $('.hover_bkgr_fricc').hide();
+           });
+           $('.popupCloseButton').click(function () {
+               $('.hover_bkgr_fricc').hide();
+           });
+       });
+   </script>
+     </head>
 <body>
-                <div>  
-                  <!--About dialog-->
-                    <dialog id="dialogAbout" style="border-color: dimgray;border-width: 1px;">
-                   <table>
-                       <tr>
-                           <td>
-                               Developed by <a href="https://www.researchgate.net/profile/Mahmoud_Elbattah2">Mahmoud Elbattah </a><br/>
-                               mahmoud.elbattah@nuigalway.ie
-                           </td>
-                       </tr>
-                       <tr>
-                           <td>
-                               <a href="https://summerofhpc.prace-ri.eu/visualising-the-world-map-of-supercomputers/"> Original Blogpost</a>
-                           </td>
-                       </tr>
-                       <tr>
-                           <td>
-                               <a href="https://github.com/Mahmoud-Elbattah/Top500Viz">Code on GitHub</a>
-                           </td>
-                       </tr>
-                   </table>
-                         <br/>
-                            <a href="#" style="position:absolute;right:3%;bottom:2%" onclick="document.getElementById('dialogAbout').close();">Close</a>
-                    </dialog>
-                    <div id="divAbout" style="position:absolute;right:1%;top:1%">
-                        <a href="#" onclick="document.getElementById('dialogAbout').showModal();">
-                            <img title="about" alt="About" src="info.png" style="width:30px;height:30px" />
+    <div>  
+     <!--About Modal Box-->
+        <div class="hover_bkgr_fricc">
+            <span class="helper"></span>
+            <div>
+                <div class="popupCloseButton">X</div>
+                <table>
+                    <tr>
+                        <td>
+                            Developed by <a href="https://www.researchgate.net/profile/Mahmoud_Elbattah2">Mahmoud Elbattah </a><br />
+                            mahmoud.elbattah@nuigalway.ie
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://summerofhpc.prace-ri.eu/visualising-the-world-map-of-supercomputers/"> Original Blogpost</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="https://github.com/Mahmoud-Elbattah/Top500Viz">Code on GitHub</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="divAbout" style="position:absolute;right:1%;top:1%">
+                        <a href="#" class="trigger_popup_fricc">
+                            <img title="about" alt="About" src="info.png" style="width:25px;height:25px" />
                         </a>
                         </div>
                    
