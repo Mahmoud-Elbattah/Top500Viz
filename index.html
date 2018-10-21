@@ -112,7 +112,7 @@
             });
             //Display infobox fields
             map.data.addListener('click', function (event) {
-
+               
                 infoBoxVisible = true;
                 var name = event.feature.getProperty('Name');
                 var rank = event.feature.getProperty('Rank');
@@ -149,7 +149,36 @@
     </script>
     </head>
 <body>
-                <div>
+                <div>  
+                  <!--About dialog-->
+                    <dialog id="dialogAbout" style="border-color: dimgray;border-width: 1px;">
+                   <table>
+                       <tr>
+                           <td>
+                               Developed by <a href="https://www.researchgate.net/profile/Mahmoud_Elbattah2">Mahmoud Elbattah </a><br/>
+                               mahmoud.elbattah@nuigalway.ie
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <a href="https://summerofhpc.prace-ri.eu/visualising-the-world-map-of-supercomputers/"> Original Blogpost</a>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <a href="https://github.com/Mahmoud-Elbattah/Top500Viz">Code on GitHub</a>
+                           </td>
+                       </tr>
+                   </table>
+                         <br/>
+                            <a href="#" style="position:absolute;right:3%;bottom:2%" onclick="document.getElementById('dialogAbout').close();">Close</a>
+                    </dialog>
+                    <div id="divAbout" style="position:absolute;right:1%;top:1%">
+                        <a href="#" onclick="document.getElementById('dialogAbout').showModal();">
+                            <img title="about" alt="About" src="info.png" style="width:30px;height:30px" />
+                        </a>
+                        </div>
+                   
                     <div>
                     <span id="pageTitle">Explore the World's Supercomputers</span>
                         <div style="display:table">
